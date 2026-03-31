@@ -1,0 +1,379 @@
+/**
+ * Password Bank Words for Pokémon HeartGold/SoulSilver
+ * 
+ * These are the 351 Easy Chat words that can be used in Primo's wallpaper passwords.
+ * The game loads them from NARC: resource/eng/pms_aikotoba/pms_aikotoba
+ * 
+ * Generated from EC word indices and game text banks.
+ */
+
+// The password bank word count
+const WORD_COUNT = 351;
+
+// EC word indices from the pms_aikotoba binary (for reference)
+const EC_WORD_INDICES = [
+    964, 965, 966, 967, 968, 969, 970, 971, 972, 974, 975, 976, 977, 979, 980, 981, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1078, 1079, 1080, 1081, 1082, 1083, 1084, 1085, 1086, 1087, 1088, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1101, 1102, 1104, 1106, 1107, 1108, 1109, 1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119, 1120, 1121, 1122, 1123, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1147, 1148, 1149, 1150, 1151, 1152, 1153, 1154, 1155, 1156, 1157, 1158, 1159, 1160, 1161, 1162, 1163, 1164, 1166, 1168, 1169, 1170, 1171, 1172, 1173, 1174, 1177, 1178, 1181, 1289, 1290, 1291, 1292, 1293, 1294, 1295, 1296, 1297, 1298, 1299, 1300, 1301, 1302, 1303, 1304, 1305, 1306, 1307, 1308, 1309, 1310, 1311, 1312, 1313, 1314, 1315, 1316, 1317, 1318, 1319, 1320, 1321, 1322, 1323, 1324, 1325, 1326, 1327, 1328, 1329, 1330, 1331, 1332, 1333, 1334, 1335, 1336, 1337, 1338, 1339, 1340, 1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348, 1349, 1350, 1351, 1352, 1353, 1354, 1355, 1356, 1357, 1358, 1359, 1360, 1361, 1362, 1363, 1364, 1365, 1366, 1367, 1368, 1369, 1370, 1371, 1372, 1373, 1374, 1375, 1376, 1377, 1378, 1379, 1380, 1381, 1382, 1383, 1384, 1385, 1386, 1387, 1388, 1389, 1390, 1391, 1392, 1393, 1394, 1395, 1396, 1397, 1398, 1399, 1400, 1401, 1402, 1403, 1404, 1405, 1406, 1407, 1408, 1409, 1410, 1411, 1412, 1413, 1414, 1415, 1416, 1417, 1418, 1419, 1420, 1421, 1422, 1423, 1424, 1425, 1426, 1427, 1428, 1429, 1431, 1432, 1434, 1435, 1436, 1438, 1439
+];
+
+/**
+ * The actual password words array.
+ * Index 0 corresponds to the first word in the password bank.
+ */
+const PASSWORD_WORDS = [
+    "NORMAL", // 0: EC 964
+    "FIGHTING", // 1: EC 965
+    "FLYING", // 2: EC 966
+    "POISON", // 3: EC 967
+    "GROUND", // 4: EC 968
+    "ROCK", // 5: EC 969
+    "BUG", // 6: EC 970
+    "GHOST", // 7: EC 971
+    "STEEL", // 8: EC 972
+    "FIRE", // 9: EC 974
+    "WATER", // 10: EC 975
+    "GRASS", // 11: EC 976
+    "ELECTRIC", // 12: EC 977
+    "ICE", // 13: EC 979
+    "DRAGON", // 14: EC 980
+    "DARK", // 15: EC 981
+    "STENCH", // 16: EC 983
+    "DRIZZLE", // 17: EC 984
+    "SPEED BOOST", // 18: EC 985
+    "BATTLE ARMOR", // 19: EC 986
+    "STURDY", // 20: EC 987
+    "DAMP", // 21: EC 988
+    "LIMBER", // 22: EC 989
+    "SAND VEIL", // 23: EC 990
+    "STATIC", // 24: EC 991
+    "VOLT ABSORB", // 25: EC 992
+    "WATER ABSORB", // 26: EC 993
+    "OBLIVIOUS", // 27: EC 994
+    "CLOUD NINE", // 28: EC 995
+    "COMPOUNDEYES", // 29: EC 996
+    "INSOMNIA", // 30: EC 997
+    "COLOR CHANGE", // 31: EC 998
+    "IMMUNITY", // 32: EC 999
+    "FLASH FIRE", // 33: EC 1000
+    "SHIELD DUST", // 34: EC 1001
+    "OWN TEMPO", // 35: EC 1002
+    "SUCTION CUPS", // 36: EC 1003
+    "INTIMIDATE", // 37: EC 1004
+    "SHADOW TAG", // 38: EC 1005
+    "ROUGH SKIN", // 39: EC 1006
+    "WONDER GUARD", // 40: EC 1007
+    "LEVITATE", // 41: EC 1008
+    "EFFECT SPORE", // 42: EC 1009
+    "SYNCHRONIZE", // 43: EC 1010
+    "CLEAR BODY", // 44: EC 1011
+    "NATURAL CURE", // 45: EC 1012
+    "LIGHTNINGROD", // 46: EC 1013
+    "SERENE GRACE", // 47: EC 1014
+    "SWIFT SWIM", // 48: EC 1015
+    "CHLOROPHYLL", // 49: EC 1016
+    "ILLUMINATE", // 50: EC 1017
+    "TRACE", // 51: EC 1018
+    "HUGE POWER", // 52: EC 1019
+    "POISON POINT", // 53: EC 1020
+    "INNER FOCUS", // 54: EC 1021
+    "MAGMA ARMOR", // 55: EC 1022
+    "WATER VEIL", // 56: EC 1023
+    "MAGNET PULL", // 57: EC 1024
+    "SOUNDPROOF", // 58: EC 1025
+    "RAIN DISH", // 59: EC 1026
+    "SAND STREAM", // 60: EC 1027
+    "PRESSURE", // 61: EC 1028
+    "THICK FAT", // 62: EC 1029
+    "EARLY BIRD", // 63: EC 1030
+    "FLAME BODY", // 64: EC 1031
+    "RUN AWAY", // 65: EC 1032
+    "KEEN EYE", // 66: EC 1033
+    "HYPER CUTTER", // 67: EC 1034
+    "PICKUP", // 68: EC 1035
+    "TRUANT", // 69: EC 1036
+    "HUSTLE", // 70: EC 1037
+    "CUTE CHARM", // 71: EC 1038
+    "PLUS", // 72: EC 1039
+    "MINUS", // 73: EC 1040
+    "FORECAST", // 74: EC 1041
+    "STICKY HOLD", // 75: EC 1042
+    "SHED SKIN", // 76: EC 1043
+    "GUTS", // 77: EC 1044
+    "MARVEL SCALE", // 78: EC 1045
+    "LIQUID OOZE", // 79: EC 1046
+    "OVERGROW", // 80: EC 1047
+    "BLAZE", // 81: EC 1048
+    "TORRENT", // 82: EC 1049
+    "SWARM", // 83: EC 1050
+    "ROCK HEAD", // 84: EC 1051
+    "DROUGHT", // 85: EC 1052
+    "ARENA TRAP", // 86: EC 1053
+    "VITAL SPIRIT", // 87: EC 1054
+    "WHITE SMOKE", // 88: EC 1055
+    "PURE POWER", // 89: EC 1056
+    "SHELL ARMOR", // 90: EC 1057
+    "AIR LOCK", // 91: EC 1058
+    "TANGLED FEET", // 92: EC 1059
+    "MOTOR DRIVE", // 93: EC 1060
+    "RIVALRY", // 94: EC 1061
+    "STEADFAST", // 95: EC 1062
+    "SNOW CLOAK", // 96: EC 1063
+    "GLUTTONY", // 97: EC 1064
+    "ANGER POINT", // 98: EC 1065
+    "UNBURDEN", // 99: EC 1066
+    "HEATPROOF", // 100: EC 1067
+    "DRY SKIN", // 101: EC 1069
+    "DOWNLOAD", // 102: EC 1070
+    "IRON FIST", // 103: EC 1071
+    "POISON HEAL", // 104: EC 1072
+    "ADAPTABILITY", // 105: EC 1073
+    "SKILL LINK", // 106: EC 1074
+    "HYDRATION", // 107: EC 1075
+    "SOLAR POWER", // 108: EC 1076
+    "QUICK FEET", // 109: EC 1077
+    "NORMALIZE", // 110: EC 1078
+    "SNIPER", // 111: EC 1079
+    "MAGIC GUARD", // 112: EC 1080
+    "NO GUARD", // 113: EC 1081
+    "STALL", // 114: EC 1082
+    "TECHNICIAN", // 115: EC 1083
+    "LEAF GUARD", // 116: EC 1084
+    "KLUTZ", // 117: EC 1085
+    "MOLD BREAKER", // 118: EC 1086
+    "SUPER LUCK", // 119: EC 1087
+    "AFTERMATH", // 120: EC 1088
+    "FOREWARN", // 121: EC 1090
+    "UNAWARE", // 122: EC 1091
+    "TINTED LENS", // 123: EC 1092
+    "FILTER", // 124: EC 1093
+    "SLOW START", // 125: EC 1094
+    "SCRAPPY", // 126: EC 1095
+    "STORM DRAIN", // 127: EC 1096
+    "ICE BODY", // 128: EC 1097
+    "SOLID ROCK", // 129: EC 1098
+    "SNOW WARNING", // 130: EC 1099
+    "HONEY GATHER", // 131: EC 1100
+    "FRISK", // 132: EC 1101
+    "RECKLESS", // 133: EC 1102
+    "FLOWER GIFT", // 134: EC 1104
+    "MATCH UP", // 135: EC 1106
+    "NO. 1", // 136: EC 1107
+    "PREPARATION", // 137: EC 1108
+    "WINS", // 138: EC 1109
+    "NO MATCH", // 139: EC 1110
+    "SPIRIT", // 140: EC 1111
+    "ACE CARD", // 141: EC 1112
+    "COME ON", // 142: EC 1113
+    "ATTACK", // 143: EC 1114
+    "SURRENDER", // 144: EC 1115
+    "COURAGE", // 145: EC 1116
+    "TALENT", // 146: EC 1117
+    "STRATEGY", // 147: EC 1118
+    "MATCH", // 148: EC 1119
+    "VICTORY", // 149: EC 1120
+    "SENSE", // 150: EC 1121
+    "VERSUS", // 151: EC 1122
+    "FIGHTS", // 152: EC 1123
+    "POWER", // 153: EC 1124
+    "CHALLENGE", // 154: EC 1125
+    "STRONG", // 155: EC 1126
+    "TAKE IT EASY", // 156: EC 1127
+    "FOE", // 157: EC 1128
+    "GENIUS", // 158: EC 1129
+    "LEGEND", // 159: EC 1130
+    "BATTLE", // 160: EC 1131
+    "FIGHT", // 161: EC 1132
+    "REVIVE", // 162: EC 1133
+    "POINTS", // 163: EC 1134
+    "SERIOUS", // 164: EC 1135
+    "LOSS", // 165: EC 1136
+    "PARTNER", // 166: EC 1137
+    "INVINCIBLE", // 167: EC 1138
+    "EASY", // 168: EC 1139
+    "WEAK", // 169: EC 1140
+    "EASY WIN", // 170: EC 1141
+    "MOVE", // 171: EC 1142
+    "TRAINER", // 172: EC 1143
+    "OPPONENT", // 173: EC 1144
+    "MOTHER", // 174: EC 1147
+    "GRANDFATHER", // 175: EC 1148
+    "UNCLE", // 176: EC 1149
+    "FATHER", // 177: EC 1150
+    "BOY", // 178: EC 1151
+    "ADULT", // 179: EC 1152
+    "BROTHER", // 180: EC 1153
+    "SISTER", // 181: EC 1154
+    "GRANDMOTHER", // 182: EC 1155
+    "AUNT", // 183: EC 1156
+    "PARENT", // 184: EC 1157
+    "OLD MAN", // 185: EC 1158
+    "ME", // 186: EC 1159
+    "GIRL", // 187: EC 1160
+    "GAL", // 188: EC 1161
+    "FAMILY", // 189: EC 1162
+    "HER", // 190: EC 1163
+    "HIM", // 191: EC 1164
+    "SIBLINGS", // 192: EC 1166
+    "MR.", // 193: EC 1168
+    "MS.", // 194: EC 1169
+    "MYSELF", // 195: EC 1170
+    "WHO", // 196: EC 1171
+    "FRIEND", // 197: EC 1172
+    "ALLY", // 198: EC 1173
+    "PERSON", // 199: EC 1174
+    "EVERYONE", // 200: EC 1177
+    "RIVAL", // 201: EC 1178
+    "BABY", // 202: EC 1181
+    "IDOL", // 203: EC 1289
+    "TOMORROW", // 204: EC 1290
+    "PLAYING", // 205: EC 1291
+    "ANIME", // 206: EC 1292
+    "JOB", // 207: EC 1293
+    "SONG", // 208: EC 1294
+    "HOME", // 209: EC 1295
+    "MOVIE", // 210: EC 1296
+    "SWEETS", // 211: EC 1297
+    "MONEY", // 212: EC 1298
+    "POCKET MONEY", // 213: EC 1299
+    "CHIT-CHAT", // 214: EC 1300
+    "TALK", // 215: EC 1301
+    "BATH", // 216: EC 1302
+    "PLAY HOUSE", // 217: EC 1303
+    "TOYS", // 218: EC 1304
+    "MUSIC", // 219: EC 1305
+    "CARDS", // 220: EC 1306
+    "SHOPPING", // 221: EC 1307
+    "CONVERSATION", // 222: EC 1308
+    "SCHOOL", // 223: EC 1309
+    "CAMERA", // 224: EC 1310
+    "VIEWING", // 225: EC 1311
+    "SPECTATE", // 226: EC 1312
+    "ANNIVERSARY", // 227: EC 1313
+    "YESTERDAY", // 228: EC 1314
+    "TODAY", // 229: EC 1315
+    "HABIT", // 230: EC 1316
+    "GROUP", // 231: EC 1317
+    "GOURMET", // 232: EC 1318
+    "GAME", // 233: EC 1319
+    "WORD", // 234: EC 1320
+    "COLLECTION", // 235: EC 1321
+    "STORE", // 236: EC 1322
+    "COMPLETE", // 237: EC 1323
+    "SERVICE", // 238: EC 1324
+    "MAGAZINE", // 239: EC 1325
+    "WALK", // 240: EC 1326
+    "WORK", // 241: EC 1327
+    "SYSTEM", // 242: EC 1328
+    "BICYCLE", // 243: EC 1329
+    "TRAINING", // 244: EC 1330
+    "CLASS", // 245: EC 1331
+    "LESSONS", // 246: EC 1332
+    "HOBBY", // 247: EC 1333
+    "INFORMATION", // 248: EC 1334
+    "SPORTS", // 249: EC 1335
+    "DAILY LIFE", // 250: EC 1336
+    "TEACHER", // 251: EC 1337
+    "SOFTWARE", // 252: EC 1338
+    "SONGS", // 253: EC 1339
+    "DIET", // 254: EC 1340
+    "TOURNAMENT", // 255: EC 1341
+    "TREASURE", // 256: EC 1342
+    "TRAVEL", // 257: EC 1343
+    "BIRTHDAY", // 258: EC 1344
+    "DANCE", // 259: EC 1345
+    "CHANNEL", // 260: EC 1346
+    "FISHING", // 261: EC 1347
+    "DATE", // 262: EC 1348
+    "LETTER", // 263: EC 1349
+    "EVENT", // 264: EC 1350
+    "DESIGN", // 265: EC 1351
+    "DIGITAL", // 266: EC 1352
+    "TEST", // 267: EC 1353
+    "DEPT. STORE", // 268: EC 1354
+    "TELEVISION", // 269: EC 1355
+    "TRAIN", // 270: EC 1356
+    "PHONE", // 271: EC 1357
+    "ITEM", // 272: EC 1358
+    "NAME", // 273: EC 1359
+    "NEWS", // 274: EC 1360
+    "POPULARITY", // 275: EC 1361
+    "STUFFED TOY", // 276: EC 1362
+    "PARTY", // 277: EC 1363
+    "COMPUTER", // 278: EC 1364
+    "FLOWERS", // 279: EC 1365
+    "HERO", // 280: EC 1366
+    "NAP", // 281: EC 1367
+    "HEROINE", // 282: EC 1368
+    "FASHION", // 283: EC 1369
+    "STUDY", // 284: EC 1370
+    "ADVENTURE", // 285: EC 1371
+    "BOARD", // 286: EC 1372
+    "BALL", // 287: EC 1373
+    "BOOK", // 288: EC 1374
+    "MACHINE", // 289: EC 1375
+    "FESTIVAL", // 290: EC 1376
+    "COMICS", // 291: EC 1377
+    "MAIL", // 292: EC 1378
+    "MESSAGE", // 293: EC 1379
+    "STORY", // 294: EC 1380
+    "PROMISE", // 295: EC 1381
+    "HOLIDAY", // 296: EC 1382
+    "DREAM", // 297: EC 1383
+    "KINDERGARTEN", // 298: EC 1384
+    "PLANS", // 299: EC 1385
+    "LIFE", // 300: EC 1386
+    "RADIO", // 301: EC 1387
+    "CRAZE", // 302: EC 1388
+    "VACATION", // 303: EC 1389
+    "LOOKS", // 304: EC 1390
+    "RENTAL", // 305: EC 1391
+    "WORLD", // 306: EC 1392
+    "BEAUTY", // 307: EC 1393
+    "DELIGHT", // 308: EC 1394
+    "STRANGENESS", // 309: EC 1395
+    "CLEVERNESS", // 310: EC 1396
+    "DISAPPOINTED", // 311: EC 1397
+    "COOLNESS", // 312: EC 1398
+    "SADNESS", // 313: EC 1399
+    "CUTENESS", // 314: EC 1400
+    "ANGER", // 315: EC 1401
+    "HEALTHY", // 316: EC 1402
+    "REGRET", // 317: EC 1403
+    "HAPPINESS", // 318: EC 1404
+    "DEPRESSED", // 319: EC 1405
+    "INCREDIBLE", // 320: EC 1406
+    "LIKES", // 321: EC 1407
+    "DISLIKE", // 322: EC 1408
+    "BORED", // 323: EC 1409
+    "IMPORTANT", // 324: EC 1410
+    "ALL RIGHT", // 325: EC 1411
+    "ADORE", // 326: EC 1412
+    "TOUGHNESS", // 327: EC 1413
+    "ENJOYMENT", // 328: EC 1414
+    "USELESS", // 329: EC 1415
+    "DROOLING", // 330: EC 1416
+    "EXCITED", // 331: EC 1417
+    "SKILLFUL", // 332: EC 1418
+    "TEARS", // 333: EC 1419
+    "HATE", // 334: EC 1420
+    "ROFL", // 335: EC 1421
+    "HAPPY", // 336: EC 1422
+    "ENERGETIC", // 337: EC 1423
+    "SURPRISE", // 338: EC 1424
+    "NERVOUS", // 339: EC 1425
+    "WANT", // 340: EC 1426
+    "SATISFIED", // 341: EC 1427
+    "RARE", // 342: EC 1428
+    "MESSED UP", // 343: EC 1429
+    "DANGER", // 344: EC 1431
+    "LOVEY-DOVEY", // 345: EC 1432
+    "SMILE", // 346: EC 1434
+    "SUBTLE", // 347: EC 1435
+    "RECOMMEND", // 348: EC 1436
+    "NICE", // 349: EC 1438
+    "DIFFICULT", // 350: EC 1439
+];
+
+// Sanity check
+if (PASSWORD_WORDS.length !== WORD_COUNT) {
+    console.error(`Word list has ${PASSWORD_WORDS.length} words, expected ${WORD_COUNT}`);
+}

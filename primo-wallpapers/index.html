@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon HGSS Wallpaper Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokémon HeartGold/SoulSilver</h1>
+            <h2>Primo's Wallpaper Password Generator</h2>
+            <p class="subtitle">Generate passwords to unlock special PC Box wallpapers</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="trainerId">Trainer ID (visible 5 digits):</label>
+                    <input type="number" id="trainerId" min="0" max="65535" placeholder="e.g. 12345">
+                    <small>Found on your Trainer Card (the 5-digit number)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="wallpaper">Wallpaper:</label>
+                    <select id="wallpaper">
+                        <option value="0">Wallpaper 1</option>
+                        <option value="1">Wallpaper 2</option>
+                        <option value="2">Wallpaper 3</option>
+                        <option value="3">Wallpaper 4</option>
+                        <option value="4">Wallpaper 5</option>
+                        <option value="5">Wallpaper 6</option>
+                        <option value="6">Wallpaper 7</option>
+                        <option value="7">Wallpaper 8</option>
+                    </select>
+                </div>
+
+                <button id="generateBtn" class="btn-primary">Generate Password</button>
+            </section>
+
+            <section class="output-section" id="outputSection" style="display: none;">
+                <h3>Your Password:</h3>
+                <div class="password-display">
+                    <div class="password-word">
+                        <span class="word-label">Word 1:</span>
+                        <span class="word-value" id="word1">-</span>
+                    </div>
+                    <div class="password-word">
+                        <span class="word-label">Word 2:</span>
+                        <span class="word-value" id="word2">-</span>
+                    </div>
+                    <div class="password-word">
+                        <span class="word-label">Word 3:</span>
+                        <span class="word-value" id="word3">-</span>
+                    </div>
+                    <div class="password-word">
+                        <span class="word-label">Word 4:</span>
+                        <span class="word-value" id="word4">-</span>
+                    </div>
+                </div>
+                <p class="instructions">Tell these words to Primo in Violet City Pokémon Center!</p>
+            </section>
+
+            <section class="error-section" id="errorSection" style="display: none;">
+                <p class="error-message" id="errorMessage"></p>
+            </section>
+        </main>
+
+        <footer>
+            <details class="algorithm-info">
+                <summary>How does this work?</summary>
+                <div class="algorithm-details">
+                    <h4>Algorithm Explanation</h4>
+                    <p>The password system encodes your Trainer ID and desired wallpaper into 4 Easy Chat words using the following steps:</p>
+                    <ol>
+                        <li><strong>Build the 4-byte payload:</strong>
+                            <ul>
+                                <li>Byte 0 = <code>0x60 | wallpaper</code> (magic nibble 6 + wallpaper 0-7)</li>
+                                <li>Byte 1 = <code>(trainerID >> 8) XOR byte0</code></li>
+                                <li>Byte 2 = <code>(trainerID & 0xFF) XOR byte0</code></li>
+                                <li>Byte 3 = <code>((byte2 XOR byte0) × (byte0 + (byte1 XOR byte0))) & 0xFF</code> (checksum)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Rotate left 3 bytes by (byte3 & 0x0F) bits</strong></li>
+                        <li><strong>XOR bytes 0,1,2 with transform(byte3)</strong> where transform duplicates high nibble: <code>0xAB → 0xAA</code></li>
+                        <li><strong>Rotate left 4 bytes by 5 bits</strong></li>
+                        <li><strong>Decode deltas to word indices:</strong> Convert the 4 bytes back to Easy Chat word indices using delta encoding with wraparound</li>
+                        <li><strong>Look up words:</strong> Convert indices to the actual Easy Chat words from the password bank (351 words)</li>
+                    </ol>
+                </div>
+            </details>
+            <p class="credits">Part of the <a href="https://github.com/DS-Pokemon-Rom-Editor">DS Pokemon Rom Editor</a> project</p>
+        </footer>
+    </div>
+
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

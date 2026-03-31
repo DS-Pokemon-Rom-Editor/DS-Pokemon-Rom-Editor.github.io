@@ -1,0 +1,314 @@
+/* Pokémon HGSS Wallpaper Password Generator Styles */
+
+:root {
+    --primary-color: #dc3545;  /* Pokémon Red */
+    --secondary-color: #007bff; /* Blue accent */
+    --gold-color: #ffd700;     /* HeartGold reference */
+    --silver-color: #c0c0c0;   /* SoulSilver reference */
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8d4a8 0%, #f5e6c8 50%, #e0e8f0 100%);
+    min-height: 100vh;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(180deg, var(--gold-color) 0%, var(--silver-color) 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    color: #444;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Main content sections */
+main {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.input-section {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold-color);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Button */
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(180deg, var(--gold-color) 0%, #e6c200 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.4);
+}
+
+/* Output section */
+.output-section {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 2px solid var(--border-color);
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.output-section h3 {
+    text-align: center;
+    color: var(--success-color);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.password-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.password-word {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--gold-color);
+}
+
+.word-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.word-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.instructions {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3cd;
+    border-radius: 8px;
+    color: #856404;
+    font-size: 0.95rem;
+}
+
+/* Error section */
+.error-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.error-message {
+    color: var(--error-color);
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.algorithm-info {
+    margin-bottom: 15px;
+}
+
+.algorithm-info summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--secondary-color);
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.algorithm-info summary:hover {
+    background: #e9ecef;
+}
+
+.algorithm-details {
+    padding: 20px;
+    margin-top: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.algorithm-details h4 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.algorithm-details ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.algorithm-details li {
+    margin-bottom: 10px;
+}
+
+.algorithm-details ul {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.algorithm-details code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+}
+
+.credits {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.credits a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    header h2 {
+        font-size: 1rem;
+    }
+    
+    .password-display {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: 20px;
+    }
+}
